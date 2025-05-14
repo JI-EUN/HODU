@@ -89,7 +89,7 @@ header h1{
   gap:30px;
 }
 .gnb-links li a{
- font-size: 1rem;
+ font-size: 1.142rem;
 }
 .gnb-wrap-box .primary-btn{
   font-weight: 700;
@@ -147,6 +147,7 @@ footer .sns-links li a.youtube{
   /*header*/
   header{
     padding:1.571rem 0;
+    z-index: 9;
   }
   header h1{
     width: 6.571rem;
@@ -166,17 +167,18 @@ footer .sns-links li a.youtube{
     flex-direction: column;
     width: 74%;
     background-color: var(--color-secondary);
-    padding: 1.38rem 5% 0;
+    padding: 1.571rem 5% 0;
     align-items: flex-start;
   }
   .main-gnb{
     width: 100%;
-    margin-top:4.13rem;
+    margin-top:4.714rem;
   }
   .main-gnb .gnb-links{
     flex-direction: column;
     align-items: flex-start;
-    margin-left:1.88rem;
+    margin-left:2.142rem;
+    gap:2.142rem;
   }
   .gnb-links li a{
     color:var(--color-white);
