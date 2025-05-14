@@ -11,7 +11,7 @@ main{
   align-items: flex-end;
 }
 .main-banner .container img{
-  max-width: clamp(197px,35vw,415px);
+  max-width: clamp(14.071rem,35vw,25.937rem);
 }
 .main-banner .text-left{
   padding-right:128px;
@@ -174,12 +174,14 @@ main{
   }
   .main-banner .container .text-left{
     text-align: center;
-    padding: 0 1.6428571428571428em;
+    padding-inline: clamp(1.28rem, 5.9vw, 1.642rem);
+    padding-bottom:0;
   }
   .main-banner .text-left .title{
-    font-size:1.5rem;
+    font-size:1.714rem;
   }
   .main-banner .text-left .sub-title{
+    font-size: 1rem;
     margin:2.142857142857143em 0;
   }
 
@@ -197,25 +199,25 @@ main{
 
   /*mobile main-gallery*/
   .main-gallery{
-    margin-top:4.285714285714286rem;
+    margin-top:4.285rem;
   }
   .main-gallery h3{
-    font-size: 1.7142857142857142rem;
+    font-size: 1.7142rem;
   }
   .main-gallery p{
-    font-size: 1rem;
-    margin:2.142857142857143em 0 2.857142857142857em;
+    font-size: 1.142rem;
+    margin:1.875em 0 0;
   }
 
   .main-gallery .gallery-banner-wrap{
     overflow-x: auto;
     width: 100%;
     max-width: 100%;
-    padding: 0 0 0 32px;
+    padding: 2.857rem 0 0 32px;
     gap:3.1428rem;
-    padding-bottom: 4.285714285714286rem;
-    scrollbar-width: none;      /* Firefox */
-    -ms-overflow-style: none;   /* IE, Edge */
+    padding-bottom: 4.285rem;
+    scrollbar-width: none;     
+    -ms-overflow-style: none;   
   }
   .main-gallery .gallery-banner-wrap::-webkit-scrollbar {
     display: none;            
@@ -229,7 +231,7 @@ main{
   .main-gallery .gallery-banner-wrap::after {
     content: "";
     display: block;
-    flex: 0 0 20px; /* 마지막 여백 */
+    flex: 0 0 1rem; /* 마지막 여백 */
   }
 
 
@@ -242,7 +244,7 @@ main{
     gap:2.142rem;
   }
   .about-more p{
-    font-size: 1.1428571428571428rem;
+    font-size: 1.142rem;
     line-height: 1.29em;
   }
   .about-more .btn{
@@ -282,7 +284,7 @@ main{
   .subscribe form .input-box-wrap input{
     width: 100%;
     font-size: 0.857rem;
-    padding:1em 3.428em;
+    padding:1em 1em 1em 3.428em;
   }
   .subscribe form .input-box-wrap .btn{
     position: relative;
