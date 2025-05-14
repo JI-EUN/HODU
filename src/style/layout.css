@@ -46,7 +46,7 @@ body{
   border-radius: 40px;
   font-size: 1em;
   line-height: 1.25em;
-  padding:0.94em 1.88em;
+  padding:0.94em 1.8125em;
   display: inline-block;
 }
 .primary-btn{
@@ -96,7 +96,7 @@ header .container{
 
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
 
   /* 공통 class */
   .mobile-block{
