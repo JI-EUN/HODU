@@ -1,0 +1,113 @@
+main{
+  min-height: 200vh;
+}
+.main-banner{
+  background-color: #F2E9D8;
+  padding-top:134px;
+}
+
+.main-banner .container{
+  display: flex;
+  align-items: flex-end;
+}
+.main-banner .container img{
+  max-width: clamp(197px,35vw,415px);
+}
+.main-banner .text-left{
+  padding-right:128px;
+  padding-bottom:262px;
+}
+.main-banner .text-left .title{
+  font-size: clamp(2.4rem, 3.33vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2256em;
+}
+.main-banner .text-left .sub-title{
+  font-size: clamp(0.875rem, 1.06vw, 1rem);
+  margin:2.5em 0;
+}
+
+
+/* main-about */
+.main-about {
+  margin-top:80px;
+}
+.main-about .container.d-flex{
+  align-items: center;
+  justify-content: space-between;
+}
+.main-about .img-wrap{
+  overflow: hidden;
+  flex-basis: 660px;
+	flex-shrink: 1;
+}
+.main-about .img-wrap img{
+  aspect-ratio: 22 / 13;
+  object-fit: cover;
+}
+.main-about  .text-right {
+  width: 510px;
+}
+.main-about  .text-right .title{
+  font-size: 2.25em;
+  line-height: 1.25em;
+  font-weight: 700;
+}
+.main-about  .text-right .sub-title{
+  font-size: 1em;
+  margin-top:30px;
+}
+
+/*main-gallery*/
+.main-gallery {
+  margin-top:120px;
+  text-align: center;
+}
+.main-gallery h3{
+  font-size: clamp(2.4rem, 3.33vw, 3rem);
+  font-weight: 700;
+}
+.main-gallery p{
+  font-size: clamp(0.875rem, 1.06vw, 1rem);
+  margin:2.5em 0 5.5em;
+}
+.main-gallery ul{
+  display: flex;
+  gap:1.5rem;
+  justify-content: space-between;
+}
+.main-gallery li{
+	flex: 1;
+  max-width: 378px;;
+}
+
+@media screen and (max-width: 768px) {
+
+  main .container{
+    max-width: calc(100% - 64px);
+  }
+  .main-banner{
+    padding-top:116px
+  }
+  .main-banner .container{
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-banner .container .text-left{
+    text-align: center;
+    padding: 0 1.6428571428571428em;
+  }
+  .main-banner .text-left .title{
+    font-size:1.71em;
+  }
+  .main-banner .text-left .sub-title{
+    margin:2.142857142857143em 0;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  body{
+    font-size: 14px;
+  }
+  
+}
