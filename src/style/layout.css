@@ -44,7 +44,7 @@ body{
 }
 .btn{
   border-radius: 40px;
-  font-size: 1em;
+  font-size: 1rem;
   line-height: 1.25em;
   padding:0.94em 1.8125em;
   display: inline-block;
@@ -66,17 +66,20 @@ body{
 
 /*header*/
 header{
-  position: fixed;
-  left:0;
+  position: sticky;
   top:0;
   padding:26px 0;
   width: 100%;
+  background-color: #F2E9D8;
 }
 header .container{
   background-color: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+header h1{
+  font-size: 0;
 }
 .gnb-links{
   display: flex;
@@ -94,10 +97,43 @@ header .container{
   margin-left:2.50em;
 }
 
-
+/*footer*/
+footer{
+  padding:2.8125rem 0;
+}
+footer>.d-flex{
+  align-items: center;
+  justify-content: space-between;
+}
+footer .footer-logo{
+  font-size: 0;
+}
+footer .sns-links .d-flex{
+  justify-content: center;
+  align-items: center;
+  gap:20px;
+}
+footer .sns-links li{font-size: 0;}
+footer .sns-links li a{
+  display: inline-block;
+  width:clamp(32px,3.03vw,42px);
+  height: clamp(32px,3.03vw,42px);
+  background-size: contain;
+}
+footer .sns-links li a.blog{
+  background-image: url('./../img/icon-blog.svg');
+}
+footer .sns-links li a.insta{
+  background-image: url('./../img/icon-insta.svg');
+}
+footer .sns-links li a.facebook{
+  background-image: url('./../img/icon-facebook.svg');
+}
+footer .sns-links li a.youtube{
+  background-image: url('./../img/icon-youtube.svg');
+}
 
 @media screen and (max-width: 1024px) {
-
   /* 공통 class */
   .mobile-block{
     display:block;
@@ -109,8 +145,11 @@ header .container{
 
 
   /*header*/
+  header{
+    padding:1.571rem 0;
+  }
   header h1{
-    width: 5.75rem;
+    width: 6.571rem;
   }
   .gnb-wrap-box{
     position: fixed;
@@ -149,13 +188,53 @@ header .container{
 
 
   .hamburger-btn{
+    font-size: 0;
+  }
 
+
+
+  /* footer */
+  footer{
+    padding:2.142857142857143em 0 1.714em;
+  }
+  footer>.d-flex{
+    display:grid;
+    grid-template-areas:
+    "logo companyLinks"
+    "snsLinks companyLinks"
+  }
+  footer .footer-logo{
+    grid-area: logo;
+    width: 7rem;
+    align-self: stretch;
+  }
+  footer .company-links{
+    grid-area: companyLinks;
+  }
+  footer .company-links li{
+    text-align: right;
+    margin-bottom:1rem;
+    font-size: 1em;
+    line-height: 1.28571em;
+  }
+  footer .company-links li:last-child{
+    margin-bottom:0;
+  }
+  footer .company-links li a{
+    color:var(--dark-gray);
+  }
+  footer .sns-links{
+    grid-area: snsLinks;
+    align-self: end;
+  }
+  footer .sns-links .d-flex{
+    gap:1rem
   }
 }
 
 
 @media screen and (max-width: 390px) {
-  body{
+  html{
     font-size: 14px;
   }
 }

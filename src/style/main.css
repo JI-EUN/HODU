@@ -3,7 +3,7 @@ main{
 }
 .main-banner{
   background-color: #F2E9D8;
-  padding-top:134px;
+  padding-top:2rem;
 }
 
 .main-banner .container{
@@ -35,18 +35,20 @@ main{
 .main-about .container.d-flex{
   align-items: center;
   justify-content: space-between;
+  gap:2em;
 }
 .main-about .img-wrap{
   overflow: hidden;
-  flex-basis: 660px;
-	flex-shrink: 1;
+  max-width: 100%;
+  width: clamp(450px,50vw,660px);
+
 }
 .main-about .img-wrap img{
   aspect-ratio: 22 / 13;
   object-fit: cover;
 }
 .main-about  .text-right {
-  width: 510px;
+  max-width: 510px;
 }
 .main-about  .text-right .title{
   font-size: 2.25em;
@@ -54,11 +56,11 @@ main{
   font-weight: 700;
 }
 .main-about  .text-right .sub-title{
-  font-size: 1em;
+  font-size: 1rem;
   margin-top:30px;
 }
 
-/*main-gallery*/
+/*pc main-gallery*/
 .main-gallery {
   margin-top:120px;
   text-align: center;
@@ -71,13 +73,12 @@ main{
   font-size: clamp(0.875rem, 1.06vw, 1rem);
   margin:2.5em 0 5.5em;
 }
-.main-gallery ul{
+.main-gallery .gallery-banner-wrap{
   display: flex;
   gap:1.5rem;
   justify-content: space-between;
 }
-.main-gallery li{
-	flex: 1;
+.main-gallery .gallery-banner-wrap li{
   max-width: 378px;
 }
 
@@ -99,6 +100,7 @@ main{
   padding:0 0 246px;
   position: relative;
   background-image:url('./../img/form-bg.png');
+  background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
 }
@@ -117,6 +119,7 @@ main{
   font-size:clamp(1.5rem,2.27vw,2.25rem);
   line-height: 1.27em;
   margin-bottom:0.5em;
+  font-weight: 700;
 }
 .subscribe .left-text-cont p{
   font-size:0.875rem;
@@ -131,6 +134,7 @@ main{
   width: 24px;
   height: 24px;
   background:url('./../img/mail.svg') no-repeat 50%;
+  background-size: contain;
   left:28px;
   top:50%;
   transform: translateY(-50%);
@@ -143,7 +147,7 @@ main{
   background-color: var(--color-white);
   position: relative;
   border:none;
-  font-size: 1em;
+  font-size: 1rem;
 }
 .subscribe form .input-box-wrap .btn{
   position: absolute;
@@ -158,28 +162,135 @@ main{
   main .container{
     max-width: calc(100% - 64px);
   }
+
+  /* main-banner */
   .main-banner{
-    padding-top:116px
+    padding-top:2.857rem;
   }
   .main-banner .container{
     flex-direction: column;
     align-items: center;
+    gap:2.78rem;
   }
   .main-banner .container .text-left{
     text-align: center;
     padding: 0 1.6428571428571428em;
   }
   .main-banner .text-left .title{
-    font-size:1.71em;
+    font-size:1.5rem;
   }
   .main-banner .text-left .sub-title{
     margin:2.142857142857143em 0;
   }
+
+  /* main-about */
+  .main-about .container.d-flex{
+    flex-direction: column;
+    gap:2.857142em;
+  }
+  .main-about .text-right .title{
+    font-size: 1.7142857142857142rem;
+  }
+  .main-about .text-right .sub-title{
+    margin-top:1.4285714285714286em;
+  }
+
+  /*mobile main-gallery*/
+  .main-gallery{
+    margin-top:4.285714285714286rem;
+  }
+  .main-gallery h3{
+    font-size: 1.7142857142857142rem;
+  }
+  .main-gallery p{
+    font-size: 1rem;
+    margin:2.142857142857143em 0 2.857142857142857em;
+  }
+
+  .main-gallery .gallery-banner-wrap{
+    overflow-x: auto;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 0 0 32px;
+    gap:3.1428rem;
+    padding-bottom: 4.285714285714286rem;
+    scrollbar-width: none;      /* Firefox */
+    -ms-overflow-style: none;   /* IE, Edge */
+  }
+  .main-gallery .gallery-banner-wrap::-webkit-scrollbar {
+    display: none;            
+  }
+  .main-gallery .gallery-banner-wrap li{
+    max-width: inherit;
+    flex-shrink: 0;
+    width: 18.571428571428573rem;
+    height: 18.571428571428573rem;
+  }
+  .main-gallery .gallery-banner-wrap::after {
+    content: "";
+    display: block;
+    flex: 0 0 20px; /* 마지막 여백 */
+  }
+
+
+  /*mobile - about-more */
+  .about-more{
+    margin:0 0 3.571rem;
+  }
+  .about-more .d-flex{
+    flex-direction: column;
+    gap:2.142rem;
+  }
+  .about-more p{
+    font-size: 1.1428571428571428rem;
+    line-height: 1.29em;
+  }
+  .about-more .btn{
+    margin-left:auto
+  }
+
+  /*mobile subscribe*/
+  .subscribe{
+    padding-bottom:12.285rem;
+    background-size: contain;
+    background-position: bottom;
+  }
+  .subscribe form{
+    border-radius: 1.285rem;
+    flex-direction: column;
+    padding:2.571rem 2.285rem;
+    transform: translateY(0);
+  }
+  .subscribe .left-text-cont h3{
+    font-size: 1.714rem;
+    margin-bottom:0.83em;
+  }
+  .subscribe .left-text-cont p{
+    font-size: 1rem;
+    margin-bottom: 2.142em;
+  }
+  .subscribe form .input-box-wrap::before{
+    top:0.785rem;
+    transform: translateY(0%);
+    width: 1.285rem;
+    height: 1.285rem;
+    left:1.142rem;
+  }
+  .subscribe form .input-box-wrap{
+    width: 100%;
+  }
+  .subscribe form .input-box-wrap input{
+    width: 100%;
+    font-size: 0.857rem;
+    padding:1em 3.428em;
+  }
+  .subscribe form .input-box-wrap .btn{
+    position: relative;
+    display: block;
+    margin:1.428em 0 0 auto;
+    right: 0;
+    top:0; 
+    transform: translateY(0%);
+  }
 }
 
-@media screen and (max-width: 390px) {
-  body{
-    font-size: 14px;
-  }
-  
-}
