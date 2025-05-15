@@ -10,10 +10,11 @@
   --base-font-size:14px;
   --table-size:1024px;
 }
-
+html{
+  font-size: 62.5%; 
+}
 body{
   min-width: 320px;
-  font-size: 16px;
 }
 /* 공통class */
 .d-flex{
@@ -22,8 +23,8 @@ body{
 .container{
   width: 100%;
   max-width: 1320px; 
-  padding-left: clamp(12px,1.13vw, 20px);
-  padding-right: clamp(12px,1.13vw, 20px);
+  padding-left: clamp(1.2rem,1.13vw, 2rem);
+  padding-right: clamp(1.2rem,1.13vw, 2rem);
   margin:0 auto;
 }
 .text-ir {
@@ -43,10 +44,10 @@ body{
   display:none;
 }
 .btn{
-  border-radius: 40px;
-  font-size: 1rem;
-  line-height: 1.25em;
-  padding:0.94em 1.8125em;
+  border-radius: 4rem;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  padding:1.5rem 3.0rem;
   display: inline-block;
   font-weight: 700;
 }
@@ -60,7 +61,7 @@ body{
 
 .img-wrap{
   font-size: 0;
-  border-radius: 30px;
+  border-radius: 3rem;
   overflow: hidden;
   box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 0.25);
 }
@@ -76,7 +77,7 @@ input:focus-visible{
 header{
   position: sticky;
   top:0;
-  padding:26px 0;
+  padding:2.6rem 0;
   width: 100%;
   background-color: #F2E9D8;
   z-index: 9;
@@ -99,10 +100,10 @@ header h1 a{display: inline-block;}
   align-items: center;
   height: 100%;
   justify-content: var(--dark-gray);
-  gap:30px;
+  gap:3.0rem;
 }
 .gnb-links li a{
- font-size: 1.142rem;
+  font-size: 1.6rem;
 }
 .gnb-wrap-box .primary-btn{
   display: inline-block;
@@ -112,10 +113,10 @@ header h1 a{display: inline-block;}
 /*상단이동 버튼*/
 .page-top-btn{
   position: fixed;
-  right:24px;
-  bottom:30px;
-  width: 50px;
-  height: 50px;
+  right:2.4rem;
+  bottom:3rem;
+  width: 5rem;
+  height: 5rem;
   border:1px solid var(--light-gray);
   background-color: var(--color-white);
   border-radius: 50%;
@@ -134,7 +135,7 @@ header h1 a{display: inline-block;}
 
 /*footer*/
 footer{
-  padding:2.8125rem 0;
+  padding:4.5rem 0;
 }
 footer>.d-flex{
   align-items: center;
@@ -146,13 +147,13 @@ footer .footer-logo{
 footer .sns-links .d-flex{
   justify-content: center;
   align-items: center;
-  gap:20px;
+  gap:2.0rem;
 }
 footer .sns-links li{font-size: 0;}
 footer .sns-links li a{
   display: inline-block;
-  width:clamp(32px,3.03vw,42px);
-  height: clamp(32px,3.03vw,42px);
+  width:clamp(3.2rem,3.03vw,4.2rem);
+  height: clamp(3.2rem,3.03vw,4.2rem);
   background-size: contain;
 }
 footer .sns-links li a.blog{
@@ -169,26 +170,33 @@ footer .sns-links li a.youtube{
 }
 
 @media screen and (max-width: 1024px) {
+  html{
+    font-size: 75%; 
+  }
   /* 공통 class */
   .mobile-block{
     display:block;
   }
   .container{
     padding:0;
-    width: calc(100% - 40px);
+    width: calc(100% - 4rem);
   }
   .btn{
-    padding:0.785em 1.714em;
+    font-size: 1.4rem;
+    padding:1.1rem 2.4rem;
+  }
+  .img-wrap{
+    border-radius: 1.8rem;
   }
 
 
   /*header*/
   header{
-    padding:1.571rem 0;
+    padding:2.4rem 0;
     z-index: 9;
   }
   header h1{
-    width: 6.571rem;
+    width: 9.2rem;
   }
   .gnb-wrap-box{
     position: fixed;
@@ -207,32 +215,28 @@ footer .sns-links li a.youtube{
     flex-direction: column;
     width: 74%;
     background-color: var(--color-secondary);
-    padding: 1.571rem 5% 0;
+    padding: 2.2rem 5% 0;
     align-items: flex-start;
   }
   .main-gnb{
     width: 100%;
-    margin-top:4.714rem;
+    margin-top:6.6rem;
   }
   .main-gnb .gnb-links{
     flex-direction: column;
     align-items: flex-start;
-    margin-left:2.142rem;
-    gap:2.142rem;
+    margin-left:3rem;
+    gap:3rem;
   }
   .gnb-links li a{
     color:var(--color-white);
   }
   .gnb-wrap-box .primary-btn{
-    margin-left:1.43em;
-    margin-top:3.57em;
+    margin:5rem 0 0 2rem;
   }
-
-
   .hamburger-btn{
     font-size: 0;
   }
-
   .page-top-btn{
     display: none;
   }
@@ -240,7 +244,7 @@ footer .sns-links li a.youtube{
 
   /* footer */
   footer{
-    padding:2.142rem 0 2rem;
+    padding:3rem 0 2.4rem;
   }
   footer>.d-flex{
     display:grid;
@@ -250,7 +254,7 @@ footer .sns-links li a.youtube{
   }
   footer .footer-logo{
     grid-area: logo;
-    width: 7rem;
+    width: 11.2rem;
     align-self: stretch;
   }
   footer .company-links{
@@ -258,9 +262,9 @@ footer .sns-links li a.youtube{
   }
   footer .company-links li{
     text-align: right;
-    margin-bottom:1.142em;
-    font-size: 1rem;
-    line-height: 1.285em;
+    margin-bottom:1.6rem;
+    font-size: 1.4rem;
+    line-height: 1.2;
   }
   footer .company-links li:last-child{
     margin-bottom:0;
@@ -273,13 +277,17 @@ footer .sns-links li a.youtube{
     align-self: end;
   }
   footer .sns-links .d-flex{
-    gap:1.142rem
+    gap:1.6rem
   }
 }
 
 
-@media screen and (max-width: 390px) {
+
+
+
+
+@media screen and (max-width: 640px) {
   html{
-    font-size: 14px;
+    font-size: 62.5%; 
   }
 }
