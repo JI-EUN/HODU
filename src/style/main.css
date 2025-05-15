@@ -13,16 +13,16 @@ main{
 .main-banner .container img{
   max-width: clamp(14.071rem,35vw,25.937rem);
 }
-.main-banner .text-left{
+.main-banner .banner-text-content{
   padding-right:128px;
   padding-bottom:262px;
 }
-.main-banner .text-left .title{
+.main-banner .banner-text-content .title{
   font-size: clamp(2.4rem, 3.33vw, 3rem);
   font-weight: 700;
   line-height: 1.2256em;
 }
-.main-banner .text-left .sub-title{
+.main-banner .banner-text-content .sub-title{
   font-size: clamp(0.875rem, 1.06vw, 1rem);
   margin:2.5em 0;
 }
@@ -47,15 +47,15 @@ main{
   aspect-ratio: 22 / 13;
   object-fit: cover;
 }
-.main-about  .text-right {
+.main-about  .about-text-content{
   max-width: 510px;
 }
-.main-about  .text-right .title{
+.main-about  .about-text-content .title{
   font-size: 2.25em;
   line-height: 1.25em;
   font-weight: 700;
 }
-.main-about  .text-right .sub-title{
+.main-about  .about-text-content .sub-title{
   font-size: 1rem;
   margin-top:30px;
 }
@@ -115,13 +115,13 @@ main{
   justify-content: space-between;
   transform: translateY(-50%);
 }
-.subscribe .left-text-cont h3{
+.subscribe .subscribe-text-cont h3{
   font-size:clamp(1.5rem,2.27vw,2.25rem);
   line-height: 1.27em;
   margin-bottom:0.5em;
   font-weight: 700;
 }
-.subscribe .left-text-cont p{
+.subscribe .subscribe-text-cont p{
   font-size:0.875rem;
   line-height: 1.2857em;
 }
@@ -172,15 +172,15 @@ main{
     align-items: center;
     gap:2.78rem;
   }
-  .main-banner .container .text-left{
+  .main-banner .container .banner-text-content{
     text-align: center;
     padding-inline: clamp(1.28rem, 5.9vw, 1.642rem);
     padding-bottom:0;
   }
-  .main-banner .text-left .title{
+  .main-banner .banner-text-content .title{
     font-size:1.714rem;
   }
-  .main-banner .text-left .sub-title{
+  .main-banner .banner-text-content .sub-title{
     font-size: 1rem;
     margin:2.142857142857143em 0;
   }
@@ -190,10 +190,10 @@ main{
     flex-direction: column;
     gap:2.857142em;
   }
-  .main-about .text-right .title{
+  .main-about .about-text-content .title{
     font-size: 1.7142857142857142rem;
   }
-  .main-about .text-right .sub-title{
+  .main-about .about-text-content .sub-title{
     margin-top:1.4285714285714286em;
   }
 
@@ -263,11 +263,11 @@ main{
     padding:2.571rem 2.285rem;
     transform: translateY(0);
   }
-  .subscribe .left-text-cont h3{
+  .subscribe .subscribe-text-cont h3{
     font-size: 1.714rem;
     margin-bottom:0.83em;
   }
-  .subscribe .left-text-cont p{
+  .subscribe .subscribe-text-cont p{
     font-size: 1rem;
     margin-bottom: 2.142em;
   }

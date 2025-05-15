@@ -1,0 +1,61 @@
+.popup-wrap{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.popup-wrap .popup-content{
+    width: 37.5rem;
+    box-shadow: 0 0 30px 0 rgba(0,0,0,0.2);
+    text-align: center;
+    background: #F2E9D8 url('./../img/pop-bg.png') no-repeat 50%;
+    background-size: cover;
+    border-radius: 1.875rem;
+    padding:3.75rem 0 2.5rem;
+}
+.popup-wrap .popup-content p{
+    font-size: 1rem;
+}
+.popup-wrap .popup-content .primary-font{
+    font-size:2.25rem;
+    font-weight: 700;
+    margin-bottom: 0.33em;
+}
+.popup-wrap .popup-content .primary-font::before{
+    content: "";
+    width: 110px;
+    height: 112px;
+    display: block;
+    margin:0 auto 1.5rem;
+    background: url('./../img/popup-hodu.png') no-repeat 50%;
+    background-size: contain;
+}
+.popup-wrap .popup-content .primary-btn{
+    margin-top:2.375em;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .popup-wrap .popup-content{
+        width: clamp(21.428rem,76vw,34.375rem);
+        border-radius: 2.142rem;
+        background-size: contain;
+        background-position: top;
+        padding-inline: clamp(1.428rem,8.2vw,3.571rem);
+        
+    }
+    .popup-wrap .popup-content .primary-font{
+        font-size: 1.714rem;
+    }
+    .popup-wrap .popup-content .primary-font::before{
+        width: 4.285rem;
+        height: 4.428rem;
+        margin-bottom: 1em;
+    }
+}

@@ -48,6 +48,7 @@ body{
   line-height: 1.25em;
   padding:0.94em 1.8125em;
   display: inline-block;
+  font-weight: 700;
 }
 .primary-btn{
   color:var(--color-white);
@@ -92,7 +93,6 @@ header h1{
  font-size: 1.142rem;
 }
 .gnb-wrap-box .primary-btn{
-  font-weight: 700;
   display: inline-block;
   margin-left:2.50em;
 }
