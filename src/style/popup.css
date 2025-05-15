@@ -8,6 +8,7 @@
     align-items: center;
     justify-content: center;
     display: none;
+    z-index: 9;
 }
 .popup-wrap .popup-content{
     width: 37.5rem;
