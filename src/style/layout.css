@@ -64,6 +64,11 @@ body{
   overflow: hidden;
   box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 0.25);
 }
+a:focus-visible,
+button:focus-visible,
+input:focus-visible{
+  outline:2px solid purple;
+}
 
 /*header*/
 header{
@@ -72,6 +77,7 @@ header{
   padding:26px 0;
   width: 100%;
   background-color: #F2E9D8;
+  z-index: 9;
 }
 header .container{
   background-color: transparent;
@@ -221,6 +227,9 @@ footer .sns-links li a.youtube{
     font-size: 0;
   }
 
+  .page-top-btn{
+    display: none;
+  }
 
 
   /* footer */
