@@ -106,13 +106,19 @@
               <div class="input-box-wrap">
                 <label for="email" class="text-ir">Email</label>
                 <input id="email" type="text" placeholder="Enter your e-mail address">
-                <button class="btn primary-btn">Subscribe</button>
+                <button class="btn primary-btn" type="button" onclick="subscribe()">Subscribe</button>
               </div>
             </form>
           </div>
         </section>
       </main>
-      <footer>
+      <button class="page-top-btn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+        <span class="text-ir">Scroll to top of page</span>
+        <svg width="20" height="13" viewBox="0 0 20 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2.35 12.6833L10 5.04992L17.65 12.6833L20 10.3333L10 0.333252L0 10.3333L2.35 12.6833Z" fill="#C4C4C4"/>
+        </svg>
+      </button>
+      <footer id="footer">
         <div class="container d-flex">
           <h2 class="footer-logo"><img src="./src/img/hodu-logo.svg" alt="HODU logo"></h2>
           <section class="mobile-block company-links">
@@ -154,14 +160,86 @@
         </div>
       </footer>
 
-
     <article class="popup-wrap">
       <section class="popup-content">
         <h2 class="text-ir">Thank you Subscribe</h2>
         <p class="primary-font">Thank you!</p>
         <p>Lorem Ipsum is simply dummy text of the printing industry.</p>
-        <button class="btn primary-btn close-pop-btn">OK! I Love HODU</button>
+        <button class="btn primary-btn close-pop-btn" onclick="popClose()">OK! I Love HODU</button>
       </section>
     </article>
+
+    <script>
+      //gnb Btn 
+      const mobileGnbBtn = document.querySelector('.hamburger-btn');
+      const mobileGnb = document.querySelector('.gnb-wrap-box');
+      const gnbCloseBtn = document.querySelector('.gnb-close-btn');
+
+      mobileGnbBtn.addEventListener('click',()=>{
+        document.body.setAttribute("style", "overflow-y:hidden");
+        mobileGnb.classList.add('show')
+      })
+
+      gnbCloseBtn.addEventListener('click',()=>{
+        document.body.setAttribute("style", "overflow-y:auto");
+        mobileGnb.classList.remove('show')
+      })
+
+      //popup관련
+
+      const popupContent = document.querySelector('.popup-wrap');
+      function checkEmail(e){
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(e);
+      }
+      function subscribe(){
+        const emailInput = document.getElementById('email').value;
+        if(checkEmail(emailInput)){
+          //메일 정상적
+          document.body.setAttribute("style", "overflow-y:hidden");
+          popupContent.setAttribute("style", "display: flex");
+        }else{
+          //메일 비정상
+          alert('mail check plz')
+        }
+      }
+      function popClose(){
+        document.body.setAttribute("style", "overflow-y:auto");
+        popupContent.setAttribute("style", "display: none");
+      }
+
+
+
+      //pageTopBtn관련
+      const pageTopBtn = document.querySelector('.page-top-btn');
+      const footer = document.getElementById('footer');
+
+      function handleScroll() {
+        const scrollY = window.scrollY || window.pageYOffset;
+        const viewportHeight = window.innerHeight;
+        const distanceFromBottom = document.body.scrollHeight - scrollY - viewportHeight;
+
+        const stopThreshold = 160; // px
+
+        if (distanceFromBottom <= stopThreshold) {
+          pageTopBtn.style.bottom = `${stopThreshold - distanceFromBottom + 30}px`;
+        } else {
+          pageTopBtn.style.bottom = '30px';
+        }
+        //버튼 show/hidden관련
+        if(window.scrollY>10){
+          pageTopBtn.classList.add('show')
+        }else{
+          pageTopBtn.classList.remove('show')
+        }
+
+      }
+
+      window.addEventListener('scroll', handleScroll);
+      window.addEventListener('resize', handleScroll);
+
+
+
+    </script>
   </body>
 </html>

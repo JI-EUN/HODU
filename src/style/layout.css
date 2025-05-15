@@ -97,6 +97,29 @@ header h1{
   margin-left:2.50em;
 }
 
+/*상단이동 버튼*/
+.page-top-btn{
+  position: fixed;
+  right:24px;
+  bottom:30px;
+  width: 50px;
+  height: 50px;
+  border:1px solid var(--light-gray);
+  background-color: var(--color-white);
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.page-top-btn.show{
+  opacity: 1;
+}
+.page-top-btn:hover svg path{
+  transition: all 0.5s;
+}
+.page-top-btn:hover svg path{  
+  fill:var(--dark-gray)
+}
+
 /*footer*/
 footer{
   padding:2.8125rem 0;
@@ -162,9 +185,11 @@ footer .sns-links li a.youtube{
     width: 100%;
     height: 100%;
     background-color: var(--color-white);
-    display: flex;
     justify-content: flex-end;
     display: none;
+  }
+  .gnb-wrap-box.show{
+    display: flex;
   }
   .gnb-wrap-box .mobile-gnb-wrap{
     flex-direction: column;
