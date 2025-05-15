@@ -95,7 +95,7 @@
         <section class="subscribe">
           <h2 class="text-ir">Join Our Mailing List</h2>
           <div class="container">
-            <form action="" class="d-flex">
+            <form action="" class="d-flex" id="subscribe-form">
               <div class="subscribe-text-cont">
                 <h3>Subscribe to our Blog post</h3>
                 <p>
@@ -187,6 +187,7 @@
 
       //popup관련
       const popupContent = document.querySelector('.popup-wrap');
+
       function checkEmail(e){
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(e);
@@ -203,6 +204,7 @@
         }
       }
       function popClose(){
+        document.getElementById('subscribe-form').submit();
         document.body.setAttribute("style", "overflow-y:auto");
         popupContent.setAttribute("style", "display: none");
       }

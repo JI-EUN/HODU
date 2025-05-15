@@ -213,7 +213,7 @@ main{
     overflow-x: auto;
     width: 100%;
     max-width: 100%;
-    padding: 2.857rem 0 0 32px;
+    padding: 2.857rem 0 0 0.571rem;
     gap:3.1428rem;
     padding-bottom: 4.285rem;
     scrollbar-width: none;     
