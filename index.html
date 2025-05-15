@@ -8,9 +8,9 @@
       <link rel="stylesheet" href="./src/style/style.css">
   </head>
   <body>
-      <header> 
+      <header id="header"> 
         <div class="container">
-          <h1><img src="./src/img/hodu-logo.svg" alt="HODU"></h1>
+          <h1><a href="/"><img src="./src/img/hodu-logo.svg" alt="HODU"></a></h1>
           <div class="gnb-wrap-box">
               <div class="mobile-gnb-wrap d-flex">
                 <button class="mobile-block gnb-close-btn">
@@ -113,10 +113,10 @@
         </section>
       </main>
       <button class="page-top-btn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
-        <span class="text-ir">Scroll to top of page</span>
         <svg width="20" height="13" viewBox="0 0 20 13" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M2.35 12.6833L10 5.04992L17.65 12.6833L20 10.3333L10 0.333252L0 10.3333L2.35 12.6833Z" fill="#C4C4C4"/>
         </svg>
+        <span class="text-ir">Scroll to top of page</span>
       </button>
       <footer id="footer">
         <div class="container d-flex">
@@ -229,8 +229,10 @@
         }
         //버튼 show/hidden관련
         if(window.scrollY>10){
+          document.getElementById('header').classList.add('shadow');
           pageTopBtn.classList.add('show')
         }else{
+          document.getElementById('header').classList.remove('shadow');
           pageTopBtn.classList.remove('show')
         }
       }

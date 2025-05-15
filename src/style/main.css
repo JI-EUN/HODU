@@ -254,7 +254,7 @@ main{
   /*mobile subscribe*/
   .subscribe{
     padding-bottom:12.285rem;
-    background-size: contain;
+    background-size: 100% auto;
     background-position: bottom;
   }
   .subscribe form{
@@ -280,6 +280,7 @@ main{
   }
   .subscribe form .input-box-wrap{
     width: 100%;
+    max-width: 34.75rem;
   }
   .subscribe form .input-box-wrap input{
     width: 100%;

@@ -81,6 +81,9 @@ header{
   background-color: #F2E9D8;
   z-index: 9;
 }
+header.shadow{
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.25);
+}
 header .container{
   background-color: transparent;
   display: flex;
@@ -90,6 +93,7 @@ header .container{
 header h1{
   font-size: 0;
 }
+header h1 a{display: inline-block;}
 .gnb-links{
   display: flex;
   align-items: center;
