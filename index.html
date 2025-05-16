@@ -95,7 +95,7 @@
         <section class="subscribe">
           <h2 class="text-ir">Join Our Mailing List</h2>
           <div class="container">
-            <form action="" class="d-flex" id="subscribe-form">
+            <form class="d-flex" id="subscribe-form">
               <div class="subscribe-text-cont">
                 <h3>Subscribe to our Blog post</h3>
                 <p>
@@ -160,14 +160,16 @@
         </div>
       </footer>
 
-    <article class="popup-wrap">
-      <section class="popup-content">
-        <h2 class="text-ir">Thank you Subscribe</h2>
-        <p class="primary-font">Thank you!</p>
-        <p>Lorem Ipsum is simply dummy text of the printing industry.</p>
-        <button class="btn primary-btn close-pop-btn" onclick="popClose()">OK! I Love HODU</button>
-      </section>
-    </article>
+      <dialog>
+        <article class="popup-wrap">
+          <h2 class="text-ir">Thank you Subscribe</h2>
+          <div class="popup-content">
+            <p class="primary-font">Thank you!</p>
+            <p>Lorem Ipsum is simply dummy text of the printing industry.</p>
+            <button class="btn primary-btn close-pop-btn" onclick="popClose()">OK! I Love HODU</button>
+          </div>
+        </article>
+      </dialog>
 
     <script>
       //gnb Btn 
@@ -195,18 +197,15 @@
       function subscribe(){
         const emailInput = document.getElementById('email').value;
         if(checkEmail(emailInput)){
-          //메일 정상적
-          document.body.setAttribute("style", "overflow-y:hidden");
-          popupContent.setAttribute("style", "display: flex");
+          document.querySelector('dialog').showModal();
         }else{
           //메일 비정상
           alert('mail check plz')
         }
       }
       function popClose(){
-        document.getElementById('subscribe-form').submit();
-        document.body.setAttribute("style", "overflow-y:auto");
-        popupContent.setAttribute("style", "display: none");
+        //document.getElementById('subscribe-form').submit();
+        document.querySelector('dialog').close();
       }
 
 
