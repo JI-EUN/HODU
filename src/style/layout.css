@@ -5,8 +5,6 @@
   --color-white:#ffffff;
   --dark-gray: #767676;
   --light-gray:#C4C4C4;
-  --base-font-size:14px;
-  --table-size:1024px;
 }
 html{
   font-size: 62.5%; 
